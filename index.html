@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор математических примеров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧮 Тренажёр по математике</h1>
+        
+        <div class="settings">
+            <div class="setting">
+                <label>Действие:</label>
+                <select id="operation">
+                    <option value="all">➕➖✖️➗ Все</option>
+                    <option value="+">➕ Сложение</option>
+                    <option value="-">➖ Вычитание</option>
+                    <option value="*">✖️ Умножение</option>
+                    <option value="/">➗ Деление (целое)</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label>Сложность (макс. число):</label>
+                <input type="number" id="maxNumber" value="20" min="5" max="100">
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="question" id="question">12 + 5</div>
+            <input type="number" id="answerInput" placeholder="Введи ответ">
+            <button id="checkBtn">✅ Проверить</button>
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <button id="newBtn" class="new-btn">🎲 Новый пример</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
